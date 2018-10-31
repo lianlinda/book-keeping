@@ -1,0 +1,61 @@
+.m-detail{
+  height: 100%;
+  padding: 7.5rem 0 3.5rem;
+  box-sizing: border-box;
+  .head{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  .head-content{
+    height: 6rem;
+    box-sizing: border-box;
+    background: #FFDA44;
+    padding: 0.625rem 0 0 0.625rem;
+    h2{
+      text-align: center;
+      .logo-text{
+        width: 5rem;
+      }
+    }
+    .head-menu{
+      padding-top: 0.3125rem;
+      display: flex;
+      li{
+        flex-grow: 3;
+        font-size: 1.25rem;
+        &.month{
+          flex-grow: 1;
+          margin-right: 0.625rem;
+          border-right: 1px solid #000;
+        }
+        .sub-title{
+          font-size: 0.875rem;
+          color: #696969;
+        }
+      }
+    }
+  }
+  .dangerous-tip{
+    display: flex;
+    align-items: center;
+    background: #FEFBEA;
+    color: #E77366;
+    height: 1.5rem;
+    padding-left: 0.625rem;
+    img{
+      margin-right: 0.2rem;
+    }
+  }
+  .content{
+    height: 100%;
+    .no-data{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}

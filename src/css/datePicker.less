@@ -1,0 +1,46 @@
+.m-date-picker{
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  .modal{
+    height: 75%;
+    background: #222222;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    animation: myfirst 2s;
+  }
+  .date-content{
+    height: 25%;
+    //animation: myfirst 2s linear;
+    background: #fff;
+    .date-head{
+      border-bottom: 1px solid #F5F5F5;
+      padding: 0.5rem 1rem;
+      text-align: center;
+    }
+    .date-choose{
+      display: flex;
+      padding: 0.5rem 2rem 0.8rem;
+      ul{
+        width: 15%;
+        margin: 0 auto;
+        li{
+          padding: 0.5rem;
+          &:nth-child(2){
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+          }
+          &:not(:nth-child(2)){
+            color: #a9a9a9;
+          }
+        }
+      }
+    }
+  }
+  @keyframes myfirst{
+    from {opacity: 0;filter: alpha(opacity=0);}
+    to {opacity: 0.5;filter: alpha(opacity=50);}
+  }
+}

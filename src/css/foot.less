@@ -1,0 +1,43 @@
+.m-foot{
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #dcdcdc;
+  padding: 0.3125rem 0;
+  li{
+    flex-grow: 1;
+    text-align: center;
+    &.add{
+      position: relative;
+      flex-grow: 2;
+      div{
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        margin-left: -1.5rem;
+        padding-top: 0.3125rem;
+        img{
+          width: 3rem;
+        }
+      }
+    }
+    .active{
+      span{
+        color: #FFDA44;
+      }
+    }
+    img{
+      display: block;
+      width: 1.75rem;
+      margin: 0 auto;
+    }
+    span{
+      color: #a9a9a9;
+      font-size: small;
+    }
+  }
+}
