@@ -61,7 +61,16 @@ export default class Detail extends Component {
               <div>暂无数据</div>
             </div>*/}
             <div className='has-data'>
-              <ListItem data={{icon: 'VIP', text: '服饰', showRightIcon: false, handleClick: this.showChooseTime}}/>
+              <ListItem data={{
+                showTitle: true,
+                leftTitle: '10月26日 星期五',
+                rightTitle: '支出：6',
+                icon: 'VIP',
+                text: '服饰',
+                rightText: '-6',
+                showRightIcon: false,
+                handleClick: this.showChooseTime
+              }}/>
             </div>
           </div>
           <DatePicker title='选择月份' type='day' ref='datePicker'/>

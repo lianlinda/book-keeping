@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
-import Foot from './layout/foot.js'
+
+import Foot from './layout/foot'
+import ListItem from './component/listItem'
+
 import '../css/chart.less'
 
 export default class Chart extends Component {
@@ -66,9 +69,19 @@ export default class Chart extends Component {
             </div>
             <div className='bottom'>
               <p>支出排行榜</p>
-              <div className='no-data'>
+              {/*<div className='no-data'>
                 <img src={require('./../image/detail/noData.png')} alt=""/>
                 <div>暂无数据</div>
+              </div>*/}
+              <div className='has-data'>
+                <ListItem data={{
+                  icon: 'VIP',
+                  text: '服饰 100%',
+                  showProportion: true,
+                  rightText: '6',
+                  showRightIcon: false,
+                  handleClick: this.showPayOrIncome
+                }}/>
               </div>
             </div>
           </div>

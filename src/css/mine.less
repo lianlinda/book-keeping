@@ -1,14 +1,37 @@
 .m-mine{
-  width: 100%;
-  height: 100%;
+  background: #F5F5F5;
+  padding-bottom: 5rem;
   .head{
-    height: 6rem;
+    height: 11.5rem;
     background: #FFDA44;
-    h2{
+    position: relative;
+    .portrait{
+      padding-top: 1.2rem;
       text-align: center;
+      .login-state{
+        margin: 1rem 0;
+      }
     }
-    .head-menu{
+    .punchClock{
+      position: absolute;
+      top: 1rem;
+      right: 0.5rem;
       display: flex;
+      align-items: center;
+      padding: 0.3rem;
+      background: #fff;
+      border-radius: 1rem;
+      font-size: 12px;
+      img{
+        margin-right: 0.5rem;
+      }
+    }
+    .statistics{
+      display: flex;
+      li{
+        flex-grow: 1;
+        text-align: center;
+      }
     }
   }
 }

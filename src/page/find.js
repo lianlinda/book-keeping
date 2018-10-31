@@ -26,10 +26,9 @@ export default class Find extends Component{
               </div>
               <ul className='bill-content'>
                 <li className='month' onClick={this.showChooseTime}>
-                  <div className='sub-title'>{time.getFullYear()}年</div>
-                  <div>
-                    <span>{month}月</span>
-                  </div>
+                <div>
+                  <span>{month}月</span>
+                </div>
                 </li>
                 <li>
                   <div className='sub-title'>收入</div>
@@ -46,7 +45,11 @@ export default class Find extends Component{
               </ul>
             </Link>
           </div>
-          <div className='margin'></div>
+          <div className='margin'/>
+          <div className='common-function'>
+            财富星课堂
+          </div>
+          <div className='margin'/>
           <div className='common-function'>
             常用功能
           </div>

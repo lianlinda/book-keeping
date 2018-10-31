@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {render} from 'react-dom'
 
 import './../../css/account/loginTip.less'
 
@@ -11,8 +12,27 @@ export default class loginTip extends Component {
     window.history.back()
   }
 
-  moreMethod = () => {
-
+  moreMethod = {
+    hide: () => {
+      let view = document.getElementById('moreMethod');
+      document.removeChild(view)
+    },
+    show: () => {
+      const view = document.createElement('div');
+      view.setAttribute('id', 'moreMethod');
+      document.body.appendChild(view);
+      render(
+          <div className='m-login-method'>
+            <div className='modal'/>
+            <div className='method'>
+              <div>注册</div>
+              <div>手机登录</div>
+              <div>取消</div>
+            </div>
+          </div>,
+          view
+      )
+    }
   }
 
   render(){
@@ -27,7 +47,7 @@ export default class loginTip extends Component {
           </div>
           <div className='btn-wrap'>
             <button className='wx-login'>微信登录</button>
-            <span onClick={this.moreMethod}>更多登录方式</span>
+            <span onClick={this.moreMethod.show}>更多登录方式</span>
           </div>
         </div>
     )

@@ -24,18 +24,23 @@ export default class Bill extends Component {
     return (
         <div className='m-bill'>
           <div className='head'>
-            <h2>
+            <div className='back'>
               <img src={require('./../image/find/back.png')} alt="" onClick={this.goBack}/>
+            </div>
+            <h2>
               账单
             </h2>
-            <div className='sub-title' onClick={this.showChooseTime}>
+            <div className='choose-year' onClick={this.showChooseTime}>
               {time.getFullYear()}年
               <img src={require('./../image/detail/down.png')} alt=""/>
             </div>
-            结余
-            <ul>
-              <li>收入</li>
-              <li>支出</li>
+            <div className='balance'>
+              <p>结余</p>
+              <p className='balance-money'>123.00</p>
+            </div>
+            <ul className='sub-title'>
+              <li><label>收入</label>123.00</li>
+              <li><label>支出</label>0.00</li>
             </ul>
           </div>
           <table>
@@ -49,10 +54,10 @@ export default class Bill extends Component {
             </thead>
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>10月</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>123.00</td>
               </tr>
             </tbody>
           </table>

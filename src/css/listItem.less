@@ -1,8 +1,39 @@
 .m-list-item{
-  .left-icon{
-    display: block;
-    width: 16px;
-    height: 16px;
+  background: #fff;
+  &.mt-10{
+    margin-top: 10px;
+  }
+  .item-title{
+    padding: 0.2rem 0.8rem;
+    font-size: 12px;
+    color: #a9a9a9;
+  }
+  .item-content{
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 0.8rem;
+    border-bottom: 1px solid #F5F5F5;
+    &.aboveTop{
+      line-height: 2.5rem;
+    }
+    .item-left{
+      margin-right: 0.5rem;
+      .left-icon{
+        display: block;
+        width: 1rem;
+        height: 3rem;
+      }
+    }
+    .proportion{
+      position: relative;
+      top: -1rem;
+      width: 95%;
+      height: 0.5rem;
+      border-radius: 0.2rem;
+      background: #FFDA44;
+      margin-left: 1.5rem;
+      clear: both;
+    }
   }
   .icon-VIP{
     background: url('./../image/mine/VIP.png') center no-repeat;
