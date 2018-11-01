@@ -310,7 +310,7 @@ export default class datePicker extends Component {
     }
     return (
         <div className={`m-date-picker ${this.state.isShow ? '' : 'hide'}`}>
-          <div className='modal' onClick={this.close}/>
+          <div className='modal' onClick={this.close} onTouchStart={this.close}/>
           <div className='date-content'>
             <div className='date-head'>
               <span className='fl' onClick={this.close}>取消</span>

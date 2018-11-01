@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 
-import DatePicker from './component/datePicker'
-import Foot from './layout/foot'
-import ListItem from './component/listItem'
+import DatePicker from '../component/datePicker'
+import Foot from '../layout/foot'
+import ListItem from '../component/listItem'
 
-import '../css/detail.less'
+import '../../css/detail.less'
 
 export default class Detail extends Component {
   constructor(props){
@@ -22,6 +22,11 @@ export default class Detail extends Component {
   // 底部弹出选择几月份
   showChooseTime = () => {
     this.refs.datePicker.show()
+  }
+
+  // 点击某条消费记录
+  goConsumptionDetail = () => {
+
   }
 
   render() {
@@ -69,7 +74,7 @@ export default class Detail extends Component {
                 text: '服饰',
                 rightText: '-6',
                 showRightIcon: false,
-                handleClick: this.showChooseTime
+                handleClick: this.goConsumptionDetail
               }}/>
             </div>
           </div>

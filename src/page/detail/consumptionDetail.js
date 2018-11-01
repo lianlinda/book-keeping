@@ -1,12 +1,10 @@
 import React, {Component} from 'react'
 
-import './../../css/account/login.less'
 
-
-export default class loginTip extends Component {
+export default class consumptionDetail extends Component {
 
   componentWillMount() {
-    document.title = '登录'
+    document.title = '消费明细'
   }
 
   render(){

@@ -15,7 +15,7 @@ export default class loginTip extends Component {
   moreMethod = {
     hide: () => {
       let view = document.getElementById('moreMethod');
-      document.removeChild(view)
+      document.body.removeChild(view)
     },
     show: () => {
       const view = document.createElement('div');
@@ -23,16 +23,26 @@ export default class loginTip extends Component {
       document.body.appendChild(view);
       render(
           <div className='m-login-method'>
-            <div className='modal'/>
+            <div className='modal' onClick={this.moreMethod.hide} onTouchStart={this.moreMethod.hide}/>
             <div className='method'>
-              <div>注册</div>
-              <div>手机登录</div>
-              <div>取消</div>
+              <div className='register' onClick={this.goRegister}>注册</div>
+              <div onClick={this.goLogin}>手机登录</div>
+              <div className='cancel' onClick={this.moreMethod.hide}>取消</div>
             </div>
           </div>,
           view
       )
     }
+  }
+
+  goRegister = () => {
+    this.moreMethod.hide()
+    this.props.history.push('/account/register')
+  }
+
+  goLogin = () => {
+    this.moreMethod.hide()
+    this.props.history.push('/account/login')
   }
 
   render(){

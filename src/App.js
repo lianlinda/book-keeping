@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Route, BrowserRouter as Router, Redirect, Switch} from 'react-router-dom'
 import accountRouter from './page/account/_router'
-import Detail from './page/detail'
+import Detail from './page/detail/detail'
 import Chart from './page/chart'
 import Find from './page/find'
 import Mine from './page/mine'
