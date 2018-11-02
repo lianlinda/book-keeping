@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 
-import Foot from './layout/foot'
-import ListItem from './component/listItem'
+import Foot from '../layout/foot'
+import ListItem from '../component/listItem'
 
-import '../css/chart.less'
+import '../../css/chart.less'
 
 export default class Chart extends Component {
   constructor(props) {
@@ -70,7 +70,7 @@ export default class Chart extends Component {
             <div className='bottom'>
               <p>支出排行榜</p>
               {/*<div className='no-data'>
-                <img src={require('./../image/detail/noData.png')} alt=""/>
+                <img src={require('../../image/detail/noData.png')} alt=""/>
                 <div>暂无数据</div>
               </div>*/}
               <div className='has-data'>
@@ -102,7 +102,7 @@ export default class Chart extends Component {
             <div className='bottom'>
               <p>收入排行榜</p>
               <div className='no-data'>
-                <img src={require('./../image/detail/noData.png')} alt=""/>
+                <img src={require('../../image/detail/noData.png')} alt=""/>
                 <div>暂无数据</div>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default class Chart extends Component {
           <div className='head'>
             <h2 onClick={this.showPayOrIncome}>
               {headerText}
-              <img src={require('./../image/detail/down.png')} alt=""/>
+              <img src={require('../../image/detail/down.png')} alt=""/>
             </h2>
             <ul className='tab' onClick={this.chooseTimeSlot.bind(this, 'bigTime')}>
               <li className='active' data-value='week'>周</li>
@@ -143,14 +143,14 @@ export default class Chart extends Component {
           <div className={`pay-income ${this.state.isShowPay ? '' : 'hide'}`}>
             <ul onClick={this.choosePayOrIncome}>
               <li data-value="pay" id='choosePay'>
-                <img src={require('./../image/keeping/pay.png')} alt="支出"/>
+                <img src={require('../../image/keeping/pay.png')} alt="支出"/>
                 支出
-                <img src={require('./../image/keeping/tick.png')} alt="" className='fr j-checked'/>
+                <img src={require('../../image/keeping/tick.png')} alt="" className='fr j-checked'/>
               </li>
               <li data-value="income" id='chooseIncome'>
-                <img src={require('./../image/keeping/income.png')} alt="收入"/>
+                <img src={require('../../image/keeping/income.png')} alt="收入"/>
                 收入
-                <img src={require('./../image/keeping/tick.png')} alt="" className='fr j-checked hide'/>
+                <img src={require('../../image/keeping/tick.png')} alt="" className='fr j-checked hide'/>
               </li>
             </ul>
           </div>

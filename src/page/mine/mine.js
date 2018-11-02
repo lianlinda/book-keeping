@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import ListItem from './component/listItem'
-import Foot from './layout/foot'
+import ListItem from '../component/listItem'
+import Foot from '../layout/foot'
 
-import '../css/mine.less'
+import '../../css/mine.less'
 
 export default class Mine extends Component{
   componentWillMount() {
@@ -19,11 +19,11 @@ export default class Mine extends Component{
         <div className='m-mine'>
           <div className='head'>
             <div className='portrait'>
-              <img src={require('./../image/mine/head.png')} alt=""/>
+              <img src={require('../../image/mine/head.png')} alt=""/>
               <p className='login-state'>未登录</p>
             </div>
             <div className='punchClock'>
-              <img src={require('./../image/mine/punchClock.png')} alt=""/>
+              <img src={require('../../image/mine/punchClock.png')} alt=""/>
               打卡
             </div>
             <ul className='statistics'>

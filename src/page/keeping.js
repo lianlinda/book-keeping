@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
+
 import KeyBoard from './component/keyBoard.js'
+
 import '../css/keeping.less';
+
+import {goBack} from '../utils/window'
 
 export default class Keeping extends Component {
   constructor(props) {
@@ -97,7 +101,7 @@ export default class Keeping extends Component {
                 <li data-value="income">收入</li>
               </ul>
             </h2>
-            <span className='fr cancel' onClick={this.cancel}>
+            <span className='fr cancel' onClick={goBack}>
               取消
             </span>
           </div>

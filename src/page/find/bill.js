@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 
-import DatePicker from './component/datePicker.js'
-import '../css/bill.less'
+import DatePicker from '../component/datePicker.js'
+import '../../css/bill.less'
+
+import {goBack} from '../../utils/window'
 
 export default class Bill extends Component {
 
@@ -14,25 +16,20 @@ export default class Bill extends Component {
     this.refs.datePicker.show()
   }
 
-  // 点击返回按钮
-  goBack = () => {
-    window.history.back()
-  }
-
   render() {
     let time = new Date();
     return (
         <div className='m-bill'>
           <div className='head'>
             <div className='back'>
-              <img src={require('./../image/find/back.png')} alt="" onClick={this.goBack}/>
+              <img src={require('../../image/find/back.png')} alt="" onClick={goBack}/>
             </div>
             <h2>
               账单
             </h2>
             <div className='choose-year' onClick={this.showChooseTime}>
               {time.getFullYear()}年
-              <img src={require('./../image/detail/down.png')} alt=""/>
+              <img src={require('../../image/detail/down.png')} alt=""/>
             </div>
             <div className='balance'>
               <p>结余</p>

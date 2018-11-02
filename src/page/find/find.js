@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
-import Foot from './layout/foot.js'
-import '../css/find.less'
+import Foot from '../layout/foot.js'
+import '../../css/find.less'
 
 export default class Find extends Component{
   componentWillMount() {
@@ -22,7 +22,7 @@ export default class Find extends Component{
             <Link to='/bill'>
               <div className='bill-head'>
                 <span>账单</span>
-                <img src={require('./../image/chart/more.png')} alt="更多" className='fr'/>
+                <img src={require('../../image/chart/more.png')} alt="更多" className='fr'/>
               </div>
               <ul className='bill-content'>
                 <li className='month' onClick={this.showChooseTime}>

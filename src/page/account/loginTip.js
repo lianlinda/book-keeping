@@ -3,13 +3,11 @@ import {render} from 'react-dom'
 
 import './../../css/account/loginTip.less'
 
+import {goBack} from '../../utils/window'
+
 export default class loginTip extends Component {
   componentWillMount() {
     document.title = '登录'
-  }
-
-  close = () => {
-    window.history.back()
   }
 
   moreMethod = {
@@ -47,9 +45,9 @@ export default class loginTip extends Component {
 
   render(){
     return(
-        <div className='m-loginTip animate-route'>
+        <div className='m-loginTip'>
           <div className='close'>
-            <img src={require('./../../image/account/close.png')} alt="" onClick={this.close} className='fr'/>
+            <img src={require('./../../image/account/close.png')} alt="" onClick={goBack} className='fr'/>
           </div>
           <div>
             <img src={require('./../../image/common/logo.png')} alt="" className='logo-img'/>

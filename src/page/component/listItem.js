@@ -27,9 +27,7 @@ export default class ListItem extends Component{
                 {showRightIcon && handleClick ? <img src={require('./../../image/chart/more.png')} alt=""/> : ''}
               </div>
               {showProportion ?
-                  <div className='proportion'>
-
-                  </div>: ''}
+                  <div className='proportion'/> : ''}
             </div>
 
           </div>

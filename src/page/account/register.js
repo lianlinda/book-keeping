@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 
-import './../../css/account/register.less'
+import '../../css/account/register.less'
+
+import {goBack} from '../../utils/window'
 
 
 export default class loginTip extends Component {
@@ -9,17 +11,12 @@ export default class loginTip extends Component {
     document.title = '注册'
   }
 
-  // 点击返回按钮
-  goBack = () => {
-    window.history.back()
-  }
-
   render(){
     return(
         <div className='m-register'>
           <div className='head'>
             <div className='back'>
-              <img src={require('./../../image/find/back.png')} alt="" onClick={this.goBack}/>
+              <img src={require('./../../image/find/back.png')} alt="" onClick={goBack}/>
             </div>
             <h2>
               注册

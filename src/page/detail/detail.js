@@ -5,7 +5,7 @@ import DatePicker from '../component/datePicker'
 import Foot from '../layout/foot'
 import ListItem from '../component/listItem'
 
-import '../../css/detail.less'
+import '../../css/detail/detail.less'
 
 export default class Detail extends Component {
   constructor(props){
@@ -26,7 +26,7 @@ export default class Detail extends Component {
 
   // 点击某条消费记录
   goConsumptionDetail = () => {
-
+    this.props.history.push('/consumptionDetail')
   }
 
   render() {
@@ -36,13 +36,13 @@ export default class Detail extends Component {
         <div className='m-detail'>
           <div className='head'>
             <div className='head-content'>
-              <h2><img src={require('./../image/common/logo2.png')} alt="鲨鱼记账" className='logo-text'/></h2>
+              <h2><img src={require('../../image/common/logo2.png')} alt="鲨鱼记账" className='logo-text'/></h2>
               <ul className='head-menu'>
                 <li className='month' onClick={this.showChooseTime}>
                   <div className='sub-title'>{time.getFullYear()}年</div>
                   <div>
                     <span>{month}月</span>
-                    <img src={require('./../image/detail/down.png')} alt=""/>
+                    <img src={require('../../image/detail/down.png')} alt=""/>
                   </div>
                 </li>
                 <li>
@@ -56,13 +56,13 @@ export default class Detail extends Component {
               </ul>
             </div>
             <Link className='dangerous-tip' to='/account/loginTip'>
-                <img src={require('./../image/detail/tip.png')} alt="风险"/>
+                <img src={require('../../image/detail/tip.png')} alt="风险"/>
                 <span>数据存在极大的丢失风险，请尽快登录！</span>
             </Link>
           </div>
           <div className='content'>
             {/*<div className='no-data'>
-              <img src={require('./../image/detail/noData.png')} alt="暂无数据"/>
+              <img src={require('../../image/detail/noData.png')} alt="暂无数据"/>
               <div>暂无数据</div>
             </div>*/}
             <div className='has-data'>
