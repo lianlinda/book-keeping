@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import '../../css/datePicker.less'
+import '../../css/component/datePicker.less'
 
 export default class datePicker extends Component {
   constructor(props) {

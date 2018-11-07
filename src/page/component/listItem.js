@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import './../../css/listItem.less'
+import '../../css/component/listItem.less'
 
 export default class ListItem extends Component{
   render(){

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import DatePicker from './datePicker.js'
 
-import '../../css/keyboard.less'
+import '../../css/component/keyboard.less'
 
 export default class keyBoard extends Component {
   constructor(props) {
